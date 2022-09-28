@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+
+import { client } from "../lib/trpcClient";
+const data = await client.query("greeting");
+---
+
+<Layout title="Welcome to Astro." bodyClass="bg-red-200 ">
+  <main class="max-w-5xl mx-auto h-screen flex items-center justify-center">
+    <div>Cari jasa landing page murah?</div>
+  </main>
+</Layout>
