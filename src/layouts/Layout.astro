@@ -1,7 +1,7 @@
 ---
 export interface Props {
   title: string;
-  bodyClass: string;
+  bodyClass?: string;
 }
 
 const { title, bodyClass }: Props = Astro.props;
@@ -16,7 +16,7 @@ const { title, bodyClass }: Props = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class={bodyClass ?? ""}>
+  <body class={bodyClass ?? "bg-red-200"}>
     <slot />
   </body>
 </html>

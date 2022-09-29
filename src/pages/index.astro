@@ -3,11 +3,234 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 
 import { client } from "../lib/trpcClient";
+import ThumbsDownIcon from "../components/icons/ThumbsDownIcon.astro";
+import Header from "../components/Header.astro";
+import Paragraph from "../components/Paragraph.astro";
+import Caption from "../components/Caption.astro";
+import TestimoniSwiper from "../components/TestimoniSwiper";
+import FeatureItem from "../components/FeatureItem.astro";
 const data = await client.query("greeting");
 ---
 
-<Layout title="Welcome to Astro." bodyClass="bg-red-200 ">
-  <main class="max-w-5xl mx-auto h-screen flex items-center justify-center">
-    <div>Cari jasa landing page murah?</div>
+<Layout title="Welcome to Astro.">
+  <main class="bg-red-200">
+    <section class="max-w-4xl mx-auto space-x-4 h-screen flex justify-center">
+      <div class="flex flex-row items-center justify-center">
+        <div>
+          <img
+            class="rounded-xl w-[300px]"
+            src="https://satulisan.com/wp-content/uploads/2022/08/testi-jasa-buat-landing-page-sunufarid-new.png?v=1660989566"
+            alt="Testi moni"
+          />
+        </div>
+        <div class="w-10"></div>
+        <div class="flex space-y-5 flex-col max-w-md">
+          <p class="text-lg">Cari jasa landing page murah?</p>
+          <p class="text-5xl leading-tight font-bold">
+            Halo, saya Ali, spesialis jasa pembuatan landing page WordPress HIGH
+            conversion
+          </p>
+          <p class="text-xl">
+            Mau saya bantu <span class="font-bold">dongkrak penjualan Anda</span
+            > lewat landing page <span class="font-bold">persuasif</span> ?
+          </p>
+          <a
+            href="#"
+            class="bg-red-500 text-red-50 w-fit text-center p-3 px-6 rounded-lg text-xl font-bold w-min whitespace-nowrap"
+            >Saya mau dibantu</a
+          >
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-8">
+      <div class="max-w-4xl mx-auto space-y-6">
+        <Header>Merasa sedang alami masalah ini ?</Header>
+        <ul class="text-gray-400 space-y-4 text-2xl w-full">
+          <li
+            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
+          >
+            <ThumbsDownIcon />
+            <span>
+              Ingin naikkan omset penjualan online, tapi bingung gimana caranya?
+            </span>
+          </li>
+          <li
+            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
+          >
+            <ThumbsDownIcon />
+            <span>
+              Butuh landing page buat jualan, tapi gak punya waktu untuk
+              bikinnya?
+            </span>
+          </li>
+          <li
+            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
+          >
+            <ThumbsDownIcon />
+            <span>
+              Ingin punya LP penjualan konversi tinggi, tapi gak ngerti cara
+              buatnya?
+            </span>
+          </li>
+          <li
+            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
+          >
+            <ThumbsDownIcon />
+            <span>
+              Nyobain bikin LP sendiri, tapi malah pusing saat menulis
+              copywriting?
+            </span>
+          </li>
+          <li
+            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
+          >
+            <ThumbsDownIcon />
+            <span>
+              Udah gonta-ganti copywriting di LP, tetap aja rugi & boncos
+              iklannya?
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-6 mt-8">
+        <Header>Tenang, saya juga sama dengan Anda</Header>
+        <Paragraph>
+          Sampai akhirnya selama 3 tahun terakhir saya fokus ngulik dan riset
+          hingga menemukan formula dan struktur LP yang optimal + stabil
+          menghasilkan konversi.
+        </Paragraph>
+        <Paragraph>
+          Gak tanggung-tanggung, saya nekat mempraktekkan hasil ngulik tersebut
+          ke bisnis saya : jasa landing page murah. Hasilnya ? SatuLisan jadi
+          satu-satunya creator landing page dengan testimoni positif dan
+          portofolio LP terbanyak di Indonesia. Izin Allah.
+        </Paragraph>
+        <Paragraph>
+          Jadi, saya akan bantu memperbesar potensi kenaikan omset bisnis Anda,
+          lewat landing page yang PERSUASIF, agar pemasaran online Anda lebih
+          optimal.
+        </Paragraph>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-6 mt-8">
+        <div class="flex flex-row space-x-9">
+          <img
+            class="rounded-xl w-[400px]"
+            src="https://satulisan.com/wp-content/uploads/2022/08/testi-jasa-buat-landing-page-mkholis-new.png"
+            alt="Testimoni 2"
+          />
+          <div class="flex flex-col">
+            <Header>Ya. Kunci utamanya adalah Persuasif</Header>
+            <div class="space-y-4 text-gray-400 text-2xl leading-9 pt-4">
+              <Paragraph>
+                Sekeren apapun LP Anda, sepanjang apapun copywritingnya, kalo
+                <span class="font-bold">gagal MEMPERSUASI</span> orang yang baca,
+                LP Anda <span class="font-bold">gagal</span> menghasilkan konversi.
+              </Paragraph>
+              <Paragraph>
+                Menurut KBBI & Wikipedia, persuasi adalah <span
+                  class="font-bold">meyakinkan</span
+                > harapan orang, <span class="font-bold">mengajak</span> orang dengan
+                alasan yang baik agar mereka mau <span class="font-bold"
+                  >melakukan sesuatu yang Anda mau</span
+                >.
+              </Paragraph>
+              <Paragraph>
+                Apa jadinya kalo copywriting LP Anda <b>TIDAK</b>
+                persuasif ? Ya <b>BONCOS</b>.
+              </Paragraph>
+            </div>
+          </div>
+        </div>
+        <Caption>Salah satu testimoni dari client</Caption>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-6 mt-6">
+        <Header>Makanya, saya buka jasa landing page</Header>
+        <div class="space-y-4">
+          <Paragraph>
+            SatuLisan hadir untuk UKM, freelancer, dan pebisnis lainnya. Saya
+            yang buatkan landing page, Anda fokus aja ke bisnis dan strategi
+            Digital Marketingnya.
+          </Paragraph>
+          <Paragraph>
+            Saya akan bantu dongkrak omset bisnis Anda lewat landing page yang
+            persuasif sehingga punya kemampuan tinggi mengkonversi traffic jadi
+            leads.
+          </Paragraph>
+          <Paragraph>
+            Leads tersebut yang selanjutnya Anda follow up sampai closing. Kalau
+            gak closing-closing gimana ? CS Anda perlu dievaluasi, hehe.
+          </Paragraph>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-6 mt-6">
+        <Header>Apa komentar pengguna jasa saya ?</Header>
+        <div>
+          <Paragraph
+            >Semanis apapun penjelasan saya, Anda lebih percaya kata konsumen
+            kan ?</Paragraph
+          >
+          <div class="pt-2">
+            <TestimoniSwiper client:only="react" />
+          </div>
+        </div>
+      </div>
+      <div class="max-w-4xl mx-auto space-y-6 mt-6">
+        <Header>Fiturnya pas, gak kurang gak berlebihan</Header>
+        <div class="pt-4">
+          <div class="grid grid-cols-2 gap-y-10">
+            <FeatureItem
+              title="Domain & Hosting"
+              desc="Saya buatkan copywriting yang bikin orang mau segera order."
+              image="https://satulisan.com/wp-content/uploads/2020/12/earth-globe.png"
+            />
+            <FeatureItem
+              title="Konten Persuasif"
+              desc="Saya buatkan copywriting yang bikin orang mau segera order."
+              image="https://satulisan.com/wp-content/uploads/2020/12/invoices.png"
+            />
+            <FeatureItem
+              title="Desain Premium"
+              desc="Ada 99+ desain landing page PRO yang bebas Anda pilih."
+              image="https://satulisan.com/wp-content/uploads/2020/12/icon-tema.png"
+            />
+            <FeatureItem
+              title="Lacak Pengunjung"
+              desc="Terintegrasi ke Analytics, Search Console dan FB / TikTok Pixel."
+              image="https://satulisan.com/wp-content/uploads/2020/12/icon-tracker.png"
+            />
+            <FeatureItem
+              title="Pondasi Optimal"
+              desc="Saya optimalkan pengaturan On Site dan On Page LP Anda."
+              image="https://satulisan.com/wp-content/uploads/2020/12/medal.png"
+            />
+            <FeatureItem
+              title="Optimasi Tambahan"
+              desc="Saya install plugin tambahan untuk dongkrak performa LP."
+              image="https://satulisan.com/wp-content/uploads/2020/12/icon-plugin.png"
+            />
+            <FeatureItem
+              title="Custom CTA"
+              desc="Mau ke WA, form daftar, form order canggih, bisa-bisa saja."
+              image="https://satulisan.com/wp-content/uploads/2022/01/click.png"
+            />
+            <FeatureItem
+              title="Mobile Responsive"
+              desc="Tampilan LP Anda pada versi mobile akan dioptimalkan."
+              image="https://satulisan.com/wp-content/uploads/2022/01/responsive.png"
+            />
+            <FeatureItem
+              title="Akses Ngebut"
+              desc="Saya optimasi LP Anda agar super cepat saat diakses."
+              image="https://satulisan.com/wp-content/uploads/2020/12/rise.png"
+            />
+            <FeatureItem
+              title="Full Support"
+              desc="Selama LP Anda online, Anda berhak dapat support saya."
+              image="https://satulisan.com/wp-content/uploads/2020/12/faqq.png"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
