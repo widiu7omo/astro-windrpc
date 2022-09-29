@@ -1,0 +1,14 @@
+---
+import Header from "../components/Header.astro";
+import Paragraph from "../components/Paragraph.astro";
+import LatestTestimoniSwiper from "../components/LatestTestimoniSwiper";
+---
+
+<div class="max-w-4xl mx-auto space-y-6 mt-6">
+  <Header>Testimoni terbaru pelanggan SatuLisan</Header>
+  <div>
+    <div class="pt-2">
+      <LatestTestimoniSwiper client:only="react" />
+    </div>
+  </div>
+</div>

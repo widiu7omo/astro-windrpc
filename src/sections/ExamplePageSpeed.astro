@@ -1,0 +1,20 @@
+---
+import Header from "../components/Header.astro";
+import ExamplePageSpeedSwiper from "../components/ExamplePageSpeedSwiper";
+import Caption from "../components/Caption.astro";
+import Paragraph from "../components/Paragraph.astro";
+---
+
+<div class="max-w-4xl mx-auto space-y-6 mt-6">
+  <Header>Tampilan kece, load speed juga ngebut</Header>
+  <div class="space-y-4">
+    <Paragraph>
+      Orang gak kabur saat buka LP, biaya akuisisi promosi / iklan jadi lebih
+      efektif.
+    </Paragraph>
+    <ExamplePageSpeedSwiper client:only="react" />
+    <Caption>
+      Chat saya untuk lihat link asli semua portofolio LP pelanggan.
+    </Caption>
+  </div>
+</div>

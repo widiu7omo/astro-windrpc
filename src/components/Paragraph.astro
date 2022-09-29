@@ -1,3 +1,11 @@
-<p class="text-gray-400 text-2xl leading-9">
+---
+export interface Props {
+  color?: string;
+}
+const { color } = Astro.props;
+const classes = (...classes) => classes.join("").toString();
+---
+
+<p class={classes("text-2xl leading-9", color ?? "text-gray-400")}>
   <slot />
 </p>
