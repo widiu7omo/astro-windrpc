@@ -6,8 +6,14 @@ import react from "@astrojs/react";
 import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
+// export default defineConfig({
+//   output: "server",
+//   adapter: vercel(),
+//   integrations: [WindiCSS(), react()],
+// });
+
 export default defineConfig({
-  output: "server",
-  adapter: vercel(),
+  site: "https://widiu7omo.github.io",
+  base: "/astro-windrpc",
   integrations: [WindiCSS(), react()],
 });
