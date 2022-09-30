@@ -7,7 +7,6 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start-node": "node index.mjs",
     "astro": "astro"
   },
   "devDependencies": {
@@ -22,10 +21,7 @@
     "@astrojs/vercel": "^2.1.0",
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^2.0.11",
-    "@trpc/client": "^9.27.2",
     "astro-integration-windicss": "^0.0.7",
-    "astro-trpc": "^0.3.1",
-    "express": "^4.18.1",
     "swiper": "^8.4.2"
   }
 }
