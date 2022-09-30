@@ -5,4 +5,4 @@ const app = express();
 app.use(express.static("dist/client/"));
 app.use(ssrHandler);
 
-app.listen(8080);
+app.listen(3000);

@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { client } from "../lib/trpcClient";
 import ThumbsDownIcon from "../components/icons/ThumbsDownIcon.astro";
 import Header from "../components/Header.astro";
 import Paragraph from "../components/Paragraph.astro";
@@ -16,8 +15,6 @@ import SectionFaq from "../components/SectionFaq";
 import Pricing from "../components/Pricing.astro";
 import ArrowRightIcon from "../components/icons/ArrowRightIcon.astro";
 import CheckBadgeIcon from "../components/icons/CheckBadgeIcon.astro";
-
-const data = await client.query("greeting");
 ---
 
 <Layout title="Welcome to Astro.">
