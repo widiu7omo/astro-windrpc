@@ -7,7 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start-node":"node index.mjs",
+    "start-node": "node index.mjs",
     "astro": "astro"
   },
   "devDependencies": {
@@ -19,7 +19,6 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@astrojs/node": "^1.0.1",
     "@astrojs/vercel": "^2.1.0",
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^2.0.11",
