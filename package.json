@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@astrojs/node": "^1.0.1",
+    "@astrojs/vercel": "^2.1.0",
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^2.0.11",
     "@trpc/client": "^9.27.2",
