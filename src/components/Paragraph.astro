@@ -3,7 +3,7 @@ export interface Props {
   color?: string;
 }
 const { color } = Astro.props;
-const classes = (...classes) => classes.join("").toString();
+const classes = (...classes) => classes.filter(Boolean).join(" ");
 ---
 
 <p class={classes("text-2xl leading-9", color ?? "text-gray-400")}>

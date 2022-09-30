@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "@astrojs/node": "^1.0.1",
+    "@headlessui/react": "^1.7.2",
+    "@heroicons/react": "^2.0.11",
     "@trpc/client": "^9.27.2",
     "astro-integration-windicss": "^0.0.7",
     "astro-trpc": "^0.3.1",

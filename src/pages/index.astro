@@ -11,14 +11,18 @@ import ExampleLandingPage from "../sections/ExampleLandingPage.astro";
 import ExamplePageSpeed from "../sections/ExamplePageSpeed.astro";
 import SectionWrapper from "../components/SectionWrapper.astro";
 import FeatureItem from "../components/FeatureItem.astro";
-import LatestTestimoniSwiper from "../components/LatestTestimoniSwiper";
 import LatestTestimonial from "../sections/LatestTestimonial.astro";
+import SectionFaq from "../components/SectionFaq";
+import Pricing from "../components/Pricing.astro";
+import ArrowRightIcon from "../components/icons/ArrowRightIcon.astro";
+import CheckBadgeIcon from "../components/icons/CheckBadgeIcon.astro";
+
 const data = await client.query("greeting");
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="bg-red-200">
-    <section class="max-w-4xl mx-auto space-x-4 h-screen flex justify-center">
+  <main class="bg-primary-500">
+    <section class="max-w-5xl mx-auto space-x-4 h-screen flex justify-center">
       <div class="flex flex-row items-center justify-center">
         <div>
           <img
@@ -29,67 +33,59 @@ const data = await client.query("greeting");
         </div>
         <div class="w-10"></div>
         <div class="flex space-y-5 flex-col max-w-md">
-          <p class="text-lg">Cari jasa landing page murah?</p>
-          <p class="text-5xl leading-tight font-bold">
+          <p class="text-lg text-secondary-200 tracking-wider font-medium">
+            Cari jasa landing page murah?
+          </p>
+          <p class="text-5xl text-secondary-200 leading-tight font-extrabold">
             Halo, saya Ali, spesialis jasa pembuatan landing page WordPress HIGH
             conversion
           </p>
-          <p class="text-xl">
+          <p class="text-xl text-secondary-200">
             Mau saya bantu <span class="font-bold">dongkrak penjualan Anda</span
             > lewat landing page <span class="font-bold">persuasif</span> ?
           </p>
           <a
             href="#"
-            class="bg-red-500 text-red-50 w-fit text-center p-3 px-6 rounded-lg text-xl font-bold w-min whitespace-nowrap"
+            class="bg-secondary-200 text-primary w-fit text-center p-3 px-6 rounded-lg text-xl font-bold w-min whitespace-nowrap"
             >Saya mau dibantu</a
           >
         </div>
       </div>
     </section>
-    <section class="bg-white py-8">
+    <section class="bg-secondary-100 py-8">
       <div class="max-w-4xl mx-auto space-y-6">
         <Header>Merasa sedang alami masalah ini ?</Header>
         <ul class="text-gray-400 space-y-4 text-2xl w-full">
-          <li
-            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
-          >
+          <li class="flex flex-row space-x-2 font-normal pb-3 items-center">
             <ThumbsDownIcon />
-            <span>
+            <span class="border-b border-primary-50">
               Ingin naikkan omset penjualan online, tapi bingung gimana caranya?
             </span>
           </li>
-          <li
-            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
-          >
+          <li class="flex flex-row space-x-2 font-normal pb-3 items-center">
             <ThumbsDownIcon />
-            <span>
+            <span class="border-b border-primary-50">
               Butuh landing page buat jualan, tapi gak punya waktu untuk
               bikinnya?
             </span>
           </li>
-          <li
-            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
-          >
+          <li class="flex flex-row space-x-2 font-normal pb-3 items-center">
             <ThumbsDownIcon />
-            <span>
+            <span class="border-b border-primary-50">
               Ingin punya LP penjualan konversi tinggi, tapi gak ngerti cara
               buatnya?
             </span>
           </li>
-          <li
-            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
-          >
+          <li class="flex flex-row space-x-2 font-normal pb-3 items-center">
             <ThumbsDownIcon />
-            <span>
+            <span class="border-b border-primary-50">
               Nyobain bikin LP sendiri, tapi malah pusing saat menulis
               copywriting?
             </span>
           </li>
-          <li
-            class="flex flex-row space-x-2 font-normal border-b border-red-100 pb-3"
-          >
+          <li class="flex flex-row space-x-2 font-normal pb-3 items-center">
             <ThumbsDownIcon />
-            <span>
+            <span class="border-b border-primary-50">
               Udah gonta-ganti copywriting di LP, tetap aja rugi & boncos
               iklannya?
             </span>
@@ -127,20 +123,26 @@ const data = await client.query("greeting");
             <div class="space-y-4 text-gray-400 text-2xl leading-9 pt-4">
               <Paragraph>
                 Sekeren apapun LP Anda, sepanjang apapun copywritingnya, kalo
-                <span class="font-bold">gagal MEMPERSUASI</span> orang yang baca,
-                LP Anda <span class="font-bold">gagal</span> menghasilkan konversi.
+                <span class="font-bold text-gray-500">gagal MEMPERSUASI</span> orang
+                yang baca, LP Anda <span class="font-bold text-gray-500"
+                  >gagal</span
+                > menghasilkan konversi.
               </Paragraph>
               <Paragraph>
                 Menurut KBBI & Wikipedia, persuasi adalah <span
-                  class="font-bold">meyakinkan</span
-                > harapan orang, <span class="font-bold">mengajak</span> orang dengan
-                alasan yang baik agar mereka mau <span class="font-bold"
+                  class="font-bold text-gray-500">meyakinkan</span
+                > harapan orang, <span class="font-bold text-gray-500"
+                  >mengajak</span
+                > orang dengan alasan yang baik agar mereka mau <span
+                  class="font-bold text-gray-500"
                   >melakukan sesuatu yang Anda mau</span
                 >.
               </Paragraph>
               <Paragraph>
-                Apa jadinya kalo copywriting LP Anda <b>TIDAK</b>
-                persuasif ? Ya <b>BONCOS</b>.
+                Apa jadinya kalo copywriting LP Anda <b class="text-gray-500"
+                  >TIDAK</b
+                >
+                persuasif ? Ya <b class="text-gray-500">BONCOS</b>.
               </Paragraph>
             </div>
           </div>
@@ -167,26 +169,30 @@ const data = await client.query("greeting");
         </div>
       </div>
       <Testimonial />
+    </section>
+    <section>
       <Feature />
+    </section>
+    <section class="bg-secondary-100">
       <ExampleLandingPage />
       <ExamplePageSpeed />
       <div class="max-w-4xl mx-auto space-y-6 mt-6">
         <Header>Kenapa pakai jasa buat landing page ?</Header>
         <div class="space-y-6">
           <ul class="space-y-2">
-            <li class="border-b border-red-100 pb-3">
+            <li class="border-b border-primary-50 pb-3">
               <Paragraph
                 >Hasil jadi landing page Anda lebih optimal karena dikerjakan
                 ahlinya.</Paragraph
               >
             </li>
-            <li class="border-b border-red-100 pb-3">
+            <li class="border-b border-primary-50 pb-3">
               <Paragraph
                 >Anda gak perlu buang waktu berhari-hari cuma mikirin
                 copywriting LP.</Paragraph
               >
             </li>
-            <li class="border-b border-red-100 pb-3">
+            <li class="border-b border-primary-50 pb-3">
               <Paragraph>
                 Anda punya banyak waktu fokus ke bisnis dan meracik strategi
                 penjualan.
@@ -201,9 +207,9 @@ const data = await client.query("greeting");
         </div>
       </div>
     </section>
-    <section>
+    <section class="bg-secondary-100 py-8">
       <SectionWrapper>
-        <Header color="text-red-500"
+        <Header color="text-primary-500"
           >LP Anda didukung theme & plugin Premium</Header
         >
         <div class="space-y-6">
@@ -225,168 +231,122 @@ const data = await client.query("greeting");
         </div>
       </SectionWrapper>
     </section>
-    <section>
-      <SectionWrapper>
-        <Header>Harga jasa pembuatan landing page murah</Header>
-        <div>
-          <Paragraph color="text-dark-600">
-            Bikin landing page jangan dianggap sebagai beban COST, tapi
-            INVESTASI. Karena landing page adalah aset produktif yang nantinya
-            bisa digunakan menghasilkan uang. Sepakat ?
-          </Paragraph>
-        </div>
-        <div class="grid grid-cols-2">
-          <div>
-            <Header>Paket BASIC</Header>
-
-            <Caption
-              >Cocok jika Anda sudah punya web WordPress / domain & hosting
-              sendiri.</Caption
-            >
-            <ul>
-              <li>Domain COM / ID</li>
-              <li>Hosting kapasitas 1 GB</li>
-              <li>Akses akun domain hosting</li>
-              <li>Akses akun cPanel website</li>
-              <li>Akses login dashboard web</li>
-              <li>Copywriting / sales letter</li>
-              <li>Kombinasi plugin spesial</li>
-              <li>Setup akun email domain</li>
-              <li>Setup Google Analytics</li>
-              <li>Setup Search Console</li>
-              <li>Setup FB / TikTok pixel</li>
-              <li>Optimasi SEO On Page</li>
-              <li>Optimasi speed ( web )</li>
-              <li>Optimasi speed ( server )</li>
-              <li>Fasilitas revisi LP minor</li>
-            </ul>
-            <div>BONUS $147</div>
-            <ul>
-              <li>Plugin Elementor PRO $49</li>
-              <li>Plugin WP Rocket PRO $49</li>
-              <li>Theme GeneratePress $49</li>
-            </ul>
-            <div>After Sales</div>
-            <ul>
-              <li>FREE diskusi apapun</li>
-              <li>Full technical support</li>
-            </ul>
-            <div>GARANSI</div>
-            <ul>
-              <li>Garansi LP error 365 hari</li>
-            </ul>
-            <Header>IDR 1.4 Juta</Header>
-
-            <Caption>Mau dapat diskon ? Order sekarang.</Caption>
-            <div>
-              <a href="#">Order Paket Basic</a>
-            </div>
-          </div>
-          <div>
-            <Header>Paket PRO</Header>
-
-            <Caption>
-              Cocok jika mau terima beres. Domain & hosting dibeli pakai data
-              Anda.</Caption
-            >
-            <ul>
-              <li>Domain COM / ID</li>
-              <li>Hosting kapasitas 1 GB</li>
-              <li>Akses akun domain hosting</li>
-              <li>Akses akun cPanel website</li>
-              <li>Akses login dashboard web</li>
-              <li>Copywriting / sales letter</li>
-              <li>Kombinasi plugin spesial</li>
-              <li>Setup akun email domain</li>
-              <li>Setup Google Analytics</li>
-              <li>Setup Search Console</li>
-              <li>Setup FB / TikTok pixel</li>
-              <li>Optimasi SEO On Page</li>
-              <li>Optimasi speed ( web )</li>
-              <li>Optimasi speed ( server )</li>
-              <li>Fasilitas revisi LP minor</li>
-            </ul>
-            <div>BONUS $147</div>
-            <ul>
-              <li>Plugin Elementor PRO $49</li>
-              <li>Plugin WP Rocket PRO $49</li>
-              <li>Theme GeneratePress $49</li>
-            </ul>
-            <div>After Sales</div>
-            <ul>
-              <li>FREE diskusi apapun</li>
-              <li>Full technical support</li>
-            </ul>
-            <div>GARANSI</div>
-
-            <ul>
-              <li>Garansi LP error 365 hari</li>
-            </ul>
-
-            <Header>IDR 1.7 Juta</Header>
-
-            <Caption>Mau dapat diskon ? Order sekarang.</Caption>
-            <div>
-              <a href="#">Order Paket Pro</a>
-            </div>
-          </div>
-        </div>
-      </SectionWrapper>
+    <section class="bg-primary">
+      <Pricing />
     </section>
-    <section>
+    <section class="bg-secondary-100 py-8">
       <SectionWrapper>
         <Header>Atau Anda butuh jenis jasa lainnya ?</Header>
         <div class="grid grid-cols-2">
-          <div>
-            <Paragraph>Hanya butuh copywriting saja ?</Paragraph>
-            <Paragraph>Butuh konten LP bahasa Inggris ?</Paragraph>
-            <Paragraph>Butuh website company profile ?</Paragraph>
+          <div class="space-y-3">
+            <div class="flex flex-row items-center space-x-2 text-primary-500">
+              <ArrowRightIcon />
+              <Paragraph>Hanya butuh copywriting saja ?</Paragraph>
+            </div>
+            <div class="flex flex-row items-center space-x-2 text-primary-500">
+              <ArrowRightIcon />
+              <Paragraph>Butuh konten LP bahasa Inggris ?</Paragraph>
+            </div>
+            <div class="flex flex-row items-center space-x-2 text-primary-500">
+              <ArrowRightIcon />
+              <Paragraph>Butuh website company profile ?</Paragraph>
+            </div>
           </div>
-          <div>
-            <Paragraph>Butuh web company profile + LP ?</Paragraph>
-            <Paragraph>Integrasi Google ads tag ke GTM ?</Paragraph>
-            <Paragraph>Mau custom CTA ke form order ?</Paragraph>
+          <div class="space-y-3">
+            <div class="flex flex-row items-center space-x-2 text-primary-500">
+              <ArrowRightIcon />
+              <Paragraph>Butuh web company profile + LP ?</Paragraph>
+            </div>
+            <div class="flex flex-row items-center space-x-2 text-primary-500">
+              <ArrowRightIcon />
+              <Paragraph>Integrasi Google ads tag ke GTM ?</Paragraph>
+            </div>
+            <div class="flex flex-row items-center space-x-2 text-primary-500">
+              <ArrowRightIcon />
+              <Paragraph>Mau custom CTA ke form order ?</Paragraph>
+            </div>
           </div>
         </div>
         <Paragraph
           >Tidak ada masalah. Diskusikan aja ke saya detail kebutuhan Anda.</Paragraph
         >
-        <div>
-          <a href="#">Saya mau diskusi dulu</a>
+        <div
+          class="px-5 py-3 bg-primary rounded-lg transform hover:scale-115 transition-all w-min whitespace-nowrap"
+        >
+          <a href="#" class="text-secondary-100 font-semibold text-2xl"
+            >Saya mau diskusi dulu</a
+          >
         </div>
       </SectionWrapper>
     </section>
-    <section>
+    <section class="bg-secondary-100 py-8 mt-6">
       <SectionWrapper>
         <LatestTestimonial />
         <Header>Keunggulan jasa landing page SatuLisan</Header>
-        <ul>
+        <ul class="text-2xl space-y-3 text-gray-400">
           <li>
-            Landing page Anda dikerjakan praktisi yang biasa jualan pakai LP.
+            <div class="flex flex-row space-x-4 items-center">
+              <div class="w-6 h-6">
+                <CheckBadgeIcon />
+              </div>
+              <Paragraph
+                >Landing page Anda dikerjakan praktisi yang biasa jualan pakai
+                LP.</Paragraph
+              >
+            </div>
           </li>
           <li>
-            Yang saya tawarkan adalah paket lengkap. Copywriting persuasif, load
-            time super cepat, tampilan profesional dan pelayanan menyenangkan.
+            <div class="flex flex-row space-x-4 items-center">
+              <div class="w-6 h-6">
+                <CheckBadgeIcon />
+              </div>
+              <Paragraph
+                >Yang saya tawarkan adalah paket lengkap. Copywriting persuasif,
+                load time super cepat, tampilan profesional dan pelayanan
+                menyenangkan. LP.</Paragraph
+              >
+            </div>
           </li>
           <li>
-            Anda dapat FULL AKSES. Login akun tempat beli domain & hosting,
-            login cPanel & web. Gak ada satupun aset digital Anda yang
-            "nyangkut" di saya.
+            <div class="flex flex-row space-x-4 items-center">
+              <div class="w-6 h-6">
+                <CheckBadgeIcon />
+              </div>
+              <Paragraph
+                >Anda dapat FULL AKSES. Login akun tempat beli domain & hosting,
+                login cPanel & web. Gak ada satupun aset digital Anda yang
+                "nyangkut" di saya.</Paragraph
+              >
+            </div>
           </li>
           <li>
-            Testimoni dan portofolio landing page asli milik pelanggan
-            SatuLisan. Bukan dummy. Jadi Anda bisa pastikan kualitas pembuatan
-            landing page saya.
+            <div class="flex flex-row space-x-4 items-center">
+              <div class="w-6 h-6">
+                <CheckBadgeIcon />
+              </div>
+              <Paragraph
+                >Testimoni dan portofolio landing page asli milik pelanggan
+                SatuLisan. Bukan dummy. Jadi Anda bisa pastikan kualitas
+                pembuatan landing page saya.</Paragraph
+              >
+            </div>
           </li>
           <li>
-            Anda akan mendapat pengalaman terbaik saat berdiskusi dengan saya
-            membahas detail kebutuhan Anda, sebelum berlanjut ke proses
-            pemesanan.
+            <div class="flex flex-row space-x-4 items-center">
+              <div class="w-6 h-6">
+                <CheckBadgeIcon />
+              </div>
+              <Paragraph
+                >Anda akan mendapat pengalaman terbaik saat berdiskusi dengan
+                saya membahas detail kebutuhan Anda, sebelum berlanjut ke proses
+                pemesanan.</Paragraph
+              >
+            </div>
           </li>
         </ul>
       </SectionWrapper>
     </section>
-    <section>
+    <section class="bg-secondary-100 py-8">
       <SectionWrapper>
         <Header>Saya sendiri yang mengerjakan LP Anda</Header>
         <Paragraph
@@ -403,139 +363,33 @@ const data = await client.query("greeting");
           terkait SEO, email marketing, advertising, dan hal-hal terkait Digital
           Marketing lainnya.</Paragraph
         >
-        <div class="flex flex-row">
-          <div><a href="#">Order LP sekarang juga</a></div>
-          <div><a href="#">Saya mau diskusi dulu</a></div>
+        <div class="flex flex-row space-x-3">
+          <div
+            class="px-5 py-3 bg-primary rounded-lg transform hover:scale-105 transition-all w-min whitespace-nowrap"
+          >
+            <a href="#" class="text-secondary-100 font-semibold text-2xl"
+              >Order LP sekarang juga</a
+            >
+          </div>
+          <div
+            class="px-5 py-3 bg-primary rounded-lg transform hover:scale-105 transition-all w-min whitespace-nowrap"
+          >
+            <a href="#" class="text-secondary-100 font-semibold text-2xl"
+              >Saya mau diskusi dulu</a
+            >
+          </div>
         </div>
       </SectionWrapper>
     </section>
-    <section>
+    <section class="bg-dark-200">
       <SectionWrapper>
         <Header>Pertanyaan umum calon pelanggan</Header>
-        <ul>
-          <li>
-            <div>Jasa pembuatan landing page ini pakai CMS apa ya ?</div>
-            <div>
-              Pakai CMS WordPress.org ( bukan WordPress.com ) dan page builder
-              Elementor PRO. Lebih lengkap fiturnya. SatuLisan tidak menerima
-              diluar WordPress.
-            </div>
-          </li>
-          <li>
-            <div>Apa bedanya sih paket landing page Basic dan Pro ?</div>
-            <div>
-              Paket Basic cocok kalau Anda sudah beli domain dan hosting. Jadi
-              saya tinggal buat landing page. Paket Pro sudah termasuk domain
-              hosting, alias terima beres.
-            </div>
-          </li>
-          <li>
-            <div>Bagaimana cara order jasa landing page murah ini ?</div>
-            <div>
-              Diskusi kebutuhan => pembayaran => isi data => pengerjaan max 5
-              hari kerja => revisi ( jika ada ) => pelunasan ( jika belum ) =>
-              serah terima akses login.
-            </div>
-          </li>
-          <li>
-            <div>Data-data apa saja yang harus saya siapkan di awal ?</div>
-            <div>
-              Informasi dasar produk ( nanti ada Google Docs yang saya kasih,
-              tinggal isi ), foto produk, video produk ( jika ada ) dan
-              testimoni ( jika sudah ada ). Dari semua data awal ini, saya yang
-              akan mengembangkan jadi sebuah sales letter yang persuasif.
-            </div>
-          </li>
-          <li>
-            <div>Terima jasa pembuatan landing page bahasa Inggris ?</div>
-            <div>
-              Ya, saya menerima. Tinggal disesuaikan aja harganya dari paket
-              diatas.
-            </div>
-          </li>
-          <li>
-            <div>Apakah bisa mengerjakan editing gambar dan video ?</div>
-            <div>
-              Editing gambar : sebatas resize ukuran dan hapus background (
-              optional jika perlu ). Jadi tidak melayani editing apapun, karena
-              saya tidak menyediakan jasa desain grafis. Editing video : saya
-              tidak melayani editing dalam bentuk apapun.
-            </div>
-          </li>
-          <li>
-            <div>Apakah bisa buat LP seperti SatuLisan tampilannya ?</div>
-            <div>
-              Mohon maaf tidak bisa. Ada 99+ template Premium yang bisa bebas
-              Anda pilih.
-            </div>
-          </li>
-          <li>
-            <div>Boleh bayar lunas setelah LP beres ?</div>
-            <div>
-              Jadi tidak perlu DP Tidak boleh. Anda komitmen bayar 50% sebagai
-              tanda jadi, saya komitmen selesaikan LP baru dilunasi. FAIR kan ?
-              Sudah banyak testimoni puas client & ratusan bukti transaksi.
-              Kalau masih ragu, berarti belum jodoh pakai jasa saya.
-            </div>
-          </li>
-          <li>
-            <div>Kalau sudah transfer lalu saya cancel apakah boleh ?</div>
-            <div>Boleh saja, namun tidak ada pengembalian pembayaran.</div>
-          </li>
-          <li>
-            <div>Pelunasan biaya paling lambat harus dibayar kapan ?</div>
-            <div>
-              Maksimal 1 hari setelah LP selesai / revisi selesai ( jika ada
-              revisi ).
-            </div>
-          </li>
-          <li>
-            <div>Setelah landing page saya beres ada support tidak ?</div>
-            <div>
-              Ada. Anda bebas diskusi dengan tim SatuLisan di jam kerja via
-              Whatsapp. Selain itu, kalau ada kendala di LP, ada error, down /
-              sejenisnya, tanggung jawab saya.
-            </div>
-          </li>
-          <li>
-            <div>Setelah landingpage beres saya bisa edit konten sendiri ?</div>
-            <div>
-              Bisa dong. Semua akses yang terkait dengan LP akan dikasih,
-              termasuk dashboard admin. Kalaupun kesulitan saat editing, tinggal
-              chat saya untuk dipandu. Anda juga akan mendapatkan video tutorial
-              cara edit konten di Elementor.
-            </div>
-          </li>
-          <li>
-            <div>Kalau sewaktu-waktu mau update konten, bisa dibantu ?</div>
-            <div>
-              Minor editing SESEKALI saya bantu, tapi tidak selalu. Karena saya
-              tidak sediakan jasa maintain konten, baik free / berbayar. Jadi
-              bisa Anda lakukan sendiri seperti client saya lainnya. Kalau ada
-              kendala, saya pandu langkah-langkahnya.
-            </div>
-          </li>
-          <li>
-            <div>Setelah bikin landing page produk saya langsung laris ?</div>
-            <div>
-              Ya jelas tidak. Landing page ibarat toko / etalase produk. Supaya
-              ada order, ya perlu dipromosiin kan ? Caranya banyak, bisa posting
-              di medsos, bisa lewat group-group Whatsapp, pakai SEO, atau pakai
-              iklan FB / IG / Google, dll.
-            </div>
-          </li>
-          <li>
-            <div>Kok copyright gambar testimoninya punya NgetikID ?</div>
-            <div>
-              SatuLisan, SalesLetter, JagoLP dan NgetikID adalah satu group.
-              Awalnya saya & tim jualan di NgetikID. Fasilitas dan harga buat
-              landing page nya sama aja.
-            </div>
-          </li>
-        </ul>
+        <div class="pt-4 pb-10">
+          <SectionFaq client:only="react" />
+        </div>
       </SectionWrapper>
     </section>
-    <section>
+    <section class="bg-secondary-100 py-8 mt-8">
       <SectionWrapper>
         <Header>SatuLisan, jasa landing page terbaik ?</Header>
         <Paragraph
@@ -551,11 +405,28 @@ const data = await client.query("greeting");
         <Paragraph
           >Anda sudah baca LP saya sejauh ini. So, tunggu apalagi ?</Paragraph
         >
-        <div class="flex flex-row">
-          <div><a href="#">Oke, saya mau order</a></div>
-          <div><a href="#">Saya mau diskusi dulu</a></div>
+        <div class="flex flex-row space-x-3">
+          <div
+            class="px-5 py-3 bg-primary rounded-lg transform hover:scale-105 transition-all w-min whitespace-nowrap"
+          >
+            <a href="#" class="text-secondary-100 font-semibold text-2xl"
+              >Oke, saya mau order</a
+            >
+          </div>
+          <div
+            class="px-5 py-3 bg-primary rounded-lg transform hover:scale-105 transition-all w-min whitespace-nowrap"
+          >
+            <a href="#" class="text-secondary-100 font-semibold text-2xl"
+              >Saya mau diskusi dulu</a
+            >
+          </div>
         </div>
       </SectionWrapper>
     </section>
+    <footer class="max-w-4xl mx-auto pt-8">
+      <i class="font-sm text-white"
+        >2019 – 2022 © SatuLisan – Jualan santai tapi efektif</i
+      >
+    </footer>
   </main>
 </Layout>

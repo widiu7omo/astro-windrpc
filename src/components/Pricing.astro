@@ -1,0 +1,94 @@
+---
+import CardPriceBasic from "./pricing/CardPriceBasic.astro";
+import CardPricePro from "./pricing/CardPricePro.astro";
+import TableFeatures from "./pricing/TableFeatures.astro";
+import TableFeaturesAfterSales from "./pricing/TableFeaturesAfterSales.astro";
+import TableFeaturesBonus from "./pricing/TableFeaturesBonus.astro";
+---
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-secondary-50 max-w-4xl mx-auto">
+  <main>
+    <!-- Pricing section -->
+    <div>
+      <div class="relative bg-primary-400">
+        <!-- Overlapping background -->
+        <div
+          aria-hidden="true"
+          class="hidden absolute bg-secondary-50 w-full h-6 bottom-0 lg:block rounded-tl-lg"
+        >
+        </div>
+
+        <div
+          class="relative max-w-2xl mx-auto pt-16 px-4 text-center sm:pt-32 sm:px-6 lg:max-w-7xl lg:px-8"
+        >
+          <h1
+            class="text-4xl font-extrabold tracking-tight sm:text-6xl text-secondary-100"
+          >
+            <span class="block lg:inline"
+              >Harga jasa pembuatan landing page</span
+            >
+            <span class="block lg:inline"> murah.</span>
+          </h1>
+          <p class="mt-4 text-xl text-secondary-50">
+            Bikin landing page jangan dianggap sebagai beban COST, tapi
+            INVESTASI. Karena landing page adalah aset produktif yang nantinya
+            bisa digunakan menghasilkan uang. Sepakat ?
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div
+          class="relative mt-8 max-w-2xl mx-auto px-4 pb-8 sm:mt-12 sm:px-6 lg:max-w-7xl lg:px-8 lg:pb-0"
+        >
+          <!-- Decorative background -->
+          <div
+            aria-hidden="true"
+            class="hidden absolute top-4 bottom-6 left-8 right-8 inset-0 bg-dark-50 rounded-tl-lg rounded-tr-lg lg:block"
+          >
+          </div>
+
+          <div class="relative space-y-6 lg:space-y-0 lg:grid lg:grid-cols-2">
+            <CardPriceBasic />
+            <CardPricePro />
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature comparison -->
+      <section aria-labelledby="comparison-heading" class="lg:block">
+        <h2 id="comparison-heading" class="sr-only">Feature comparison</h2>
+        <div class="mt-24 max-w-7xl mx-auto px-8 rounded-b-lg pb-8">
+          <div class="w-full border-t border-gray-200 flex items-stretch">
+            <div class="-mt-px w-1/3 py-6 pr-4 flex items-end">
+              <h3 class="mt-auto text-sm font-bold text-gray-900">
+                Catered for business
+              </h3>
+            </div>
+            <div aria-hidden="true" class="pr-4 -mt-px pl-4 w-1/3">
+              <div class="border-transparent py-6 border-t-2">
+                <p class="text-gray-900 text-sm font-bold">Basic</p>
+                <p class="mt-2 text-sm text-gray-500">
+                  Cocok jika Anda sudah punya web WordPress / domain & hosting
+                  sendiri.
+                </p>
+              </div>
+            </div>
+            <div aria-hidden="true" class="pr-4 -mt-px pl-4 w-1/3">
+              <div class="border-primary py-6 border-t-2">
+                <p class="text-gray-600 text-sm font-bold">PRO</p>
+                <p class="mt-2 text-sm text-gray-500">
+                  Cocok jika mau terima beres. Domain & hosting dibeli pakai
+                  data Anda.
+                </p>
+              </div>
+            </div>
+          </div>
+          <TableFeatures />
+          <TableFeaturesBonus />
+          <TableFeaturesAfterSales />
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
